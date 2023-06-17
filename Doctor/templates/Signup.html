@@ -1,0 +1,362 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Doctor Signup page</title>
+    <style>
+     .submit-button {
+    font-size: 18px;
+    background-image: linear-gradient(15deg, #282eb6, #9cd3eb);
+    border: none;
+    color: aliceblue;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 30px;
+    position: absolute;
+}
+
+.submit-button:hover {
+    background-image: linear-gradient(15deg, #9cd3eb, #282eb6);
+}
+   
+   
+   .signup-form input {
+    /* Add your CSS styles for input elements here */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px; /* Adjust the font size as desired */
+    height: 40px; /* Adjust the height as desired */
+    margin-top: 5px; /* Add margin between fields */
+}
+
+.signup-form label {
+    padding-bottom: 5px; /* Add margin between label and field */
+}
+
+        .canvas3{
+            width:550px;height: 700px;border-radius: 10%; background-image:linear-gradient(199deg,#282eb6, #9cd3eb,#282eb6);margin-top: 140px; margin-left: 200px;
+        }
+        .body{
+            margin-left: 10px; margin-right: 10px;
+            }
+        .image{
+            height: 750px; width: 630px; margin-left: -580px;margin-top: 130px;
+        }
+        .heading
+        {
+            font-size: 38px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            color: #282eb6;
+            font-style: italic;
+            margin-top: -760px;
+            margin-left: 1030px;
+        }
+        .text{
+            font-size: 30px;
+            margin-top: 25px;
+            color: #282eb6;
+        }
+        .fields{
+          /* border-color: #282eb6; */
+          border-width: 2px;
+            border-color: #282eb6;
+            border-top: 0px;
+            margin-top: 30px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 0cap; 
+          
+          
+        }
+        .submit{
+            background-image:linear-gradient(15deg,#282eb6, #9cd3eb);
+            margin-left: 200px;
+            font-size: large;
+            border-color: #282eb6;
+            height: 40px;
+            border-radius: 10%;
+            padding-top: -20px;
+            width: 100px;
+            box-shadow: #9cd3eb;
+            color: aliceblue;
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+
+        
+label {
+    color: #282eb6;
+    font-size: 28px;
+
+}
+
+.signup-form input {
+    /* Add your CSS styles for input elements here */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px; /* Adjust the font size as desired */
+    height: 40px; /* Adjust the height as desired */
+    margin-top: 5px; /* Add margin between fields */
+}
+
+.signup-form label {
+    margin-bottom: 5px; /* Add margin between label and field */
+}
+
+
+.license-number-field {
+    /* Add your CSS styles for the license number field here */
+    /* Example styles */
+    border-width: 2px;
+            border-color: #282eb6;
+            border-top: 0px;
+            margin-top: 10px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 0cap; 
+            width: 210px;
+}
+
+
+.email-field {
+    border-width: 2px;
+    border-color: #282eb6;
+            border-top: 0px;
+            margin-top: 10px;
+          width: 500px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 0cap; 
+            width: 510px;
+}
+.country-field{
+
+    border-width: 2px;
+            border-color: #282eb6;
+            border-top: 0px;
+            margin-top: 10px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 0cap;
+            width: 210px;
+}
+.specialization-field{
+    border-width: 2px;
+            border-color: #282eb6;
+            border-top: 0px;
+            margin-top: 10px;
+            border-left: 0px;
+            margin-left: 0px;
+            
+            border-right: 0px;
+            border-bottom: 0cap;
+            width: 210px; 
+}
+.phone-number-field{
+    border-width: 2px;
+            border-color: #282eb6;
+            border-top: 0px;
+            margin-top: 10px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 0cap;
+            width: 210px; 
+}
+.password1-field{
+    border-width: 2px;
+            border-color: #282eb6;
+            border-top: 0px;
+            margin-top: 10px;
+            margin-left: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 0cap; 
+            width: 210px;
+}
+.password2-field{
+    border-width: 2px;
+            border-color: #282eb6;
+            border-top: 0px;
+            margin-top: 10px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 0cap; 
+            width: 210px;
+}
+.name-field{
+    border-width: 2px;
+            border-color: #282eb6;
+            border-top: 0px;
+            margin-top: -299px;
+            margin-left: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 0cap; 
+            width: 510px;
+        
+}
+.username-field {
+   
+    border-width: 2px;
+            border-color: #282eb6;
+            border-top: 0px;
+            margin-top: 10px;
+            margin-left: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 0cap; 
+     
+            width: 210px;
+}
+
+
+    </style>
+    
+  </head>
+  <body class="body">
+    <div>
+    <canvas class="canvas3"></canvas>
+    <img src="https://www.freepnglogos.com/uploads/doctor-png/doctor-bulk-billing-doctors-chapel-hill-health-care-medical-3.png" alt="Doctor Image"  class="image">
+    </div>
+    <h1 class="heading">Doctor Sign_up</h1>
+    <div style="margin-left: 900px; margin-top: 80px;">
+    <form method="post">
+        {% csrf_token %}
+        <div style="color: blue; background: none; margin-top: -40px; padding: 10px;" class="form-group">
+            <label for="name" >Name:</label>
+            <br>
+            <input type="text" id="name" name="name" class="name-field" style=" 
+            padding: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid blue;
+            font-size: 16px; /* Adjust the font size as desired */
+            height: 30px; /* Adjust the height as desired */
+            margin-top: 5px;">
+        </div>
+        <div style="color: blue; background: none; margin-right: 400px; margin-bottom: -200px; padding: 10px;" class="form-group">
+            <label for="username">Username:</label>
+            <br>
+            <input style=" 
+            padding: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid blue;
+            font-size: 16px; /* Adjust the font size as desired */
+            height: 30px; /* Adjust the height as desired */
+            margin-top: 5px;"
+ type="text" id="username" name="username" class="username-field">
+        </div>
+        <div style="color: blue; background: none; margin-left: 300px; margin-top: 118px; padding: 10px;" class="form-group">
+            <label for="phone_number">Phone Number:</label>
+            <br>
+            <input style=" 
+            padding: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid blue;
+            font-size: 16px; /* Adjust the font size as desired */
+            height: 30px; /* Adjust the height as desired */
+            margin-top: 5px;"
+ type="text" id="phone_number" name="phone_number" class="phone-number-field">
+        </div>
+        <div style="color: blue; background: none; margin-top: 0px; padding: 10px;" class="form-group">
+            <label for="password1">Password:</label>
+            <br>
+            <input style=" 
+            padding: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid blue;
+            font-size: 16px; /* Adjust the font size as desired */
+            height: 30px; /* Adjust the height as desired */
+            margin-top: 5px;"
+ type="password" id="password1" name="password1" class="password1-field">
+        </div>
+        <div style="color: blue; background: none; margin-left: 300px; margin-top: -77px; padding: 5px;" class="form-group">
+            <label for="password2">Confirm Password:</label>
+            <br>
+            <input style=" 
+            padding: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid blue;
+            font-size: 16px; /* Adjust the font size as desired */
+            height: 30px; /* Adjust the height as desired */
+            margin-top: 5px;"
+ type="password" id="password2" name="password2" class="password2-field">
+        </div>
+        <div style="color: blue; background: none; margin-left: 0px; margin-top: 20px; padding: 5px;" class="form-group">
+            <label for="specialization">Specialization:</label>
+            <br>
+            <input style=" 
+            padding: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid blue;
+            font-size: 16px; /* Adjust the font size as desired */
+            height: 30px; /* Adjust the height as desired */
+            margin-top: 5px;"
+ type="text" id="specialization" name="specialization" class="specialization-field">
+        </div>
+        <div style="color: blue; background: none; margin-left: 300px; margin-top: -72px; padding: 5px;" class="form-group">
+            <label for="country">Country:</label>
+            <br>
+            <input style=" 
+            padding: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid blue;
+            font-size: 16px; /* Adjust the font size as desired */
+            height: 30px; /* Adjust the height as desired */
+            margin-top: 5px;"
+ type="text" id="country" name="country" class="country-field">
+        </div>
+        <div style="color: blue; background: none; margin-left: 0px; margin-top: 30px; padding: 5px;" class="form-group">
+            <label for="license_number">License Number:</label>
+            <br>
+            <input style=" 
+            padding: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid blue;
+            font-size: 16px; /* Adjust the font size as desired */
+            height: 30px; /* Adjust the height as desired */
+            margin-top: 5px;"
+ type="text" id="license_number" name="license_number" class="license-number-field">   
+        </div>
+        <div style="color: blue; background: none; margin-left: 0px; margin-top: 30px; padding: 5px;" class="form-group">
+            <label for="email">Email:</label>
+            <br>
+            <input style=" 
+            padding: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid blue;
+            font-size: 16px; /* Adjust the font size as desired */
+            height: 30px; /* Adjust the height as desired */
+            margin-top: 5px;"
+ type="email" id="email" name="email" class="email-field">
+        </div>
+        <div style="color: blue; background: none;margin-left: 160px; margin-top: 20px;margin-bottom: 30PX;  padding: 5px; align-items: center;" class="form-group">
+            <button type="submit" class="submit-button">Submit</button>
+        </div>
+    </form>
+    </div>
+  </body>
+</html>

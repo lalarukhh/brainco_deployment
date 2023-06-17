@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    
+
+.canvas3{
+            width:550px;height: 700px;border-radius: 10%; background-image:linear-gradient(199deg,#282eb6, #9cd3eb,#282eb6);margin-top: 140px; margin-left: 200px;
+        }
+        .body{
+            margin-left: 10px; margin-right: 10px;
+            }
+        .image{
+            height: 750px; width: 630px; margin-left: -580px;margin-top: 130px;
+        }
+        .heading
+        {
+            font-size: 38px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            color: #282eb6;
+            font-style: italic;
+            margin-top: -760px;
+            margin-left: 1030px;
+        }
+        .text{
+            font-size: 30px;
+            margin-top: 25px;
+            color: #282eb6;
+        }
+        .fields{
+          /* border-color: #282eb6; */
+          border-width: 2px;
+            border-color: #282eb6;
+            border-top: 0px;
+            margin-top: 30px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 0cap; 
+          
+          
+        }
+        h1 {
+        position: absolute;
+        left: 395px;
+    }
+    /* .img {
+        
+        margin-left: 100px;
+        top: 0px;
+        height: 625px;
+        width: 500px;
+        right: 0px;
+    } */
+    .container2 {
+        position: absolute;
+        /* height: 100px; */
+        top: 40px;
+        margin: -20px 250px;
+        padding: 100px;
+
+    }
+    input {
+        outline: none; 
+        border-top: none;
+        border-right: none;
+        border-left: none;
+         /* border: none;  */
+        height: 20px;
+        /* border-radius: 10px;  */
+        color: #282EB6;
+    }
+    /* p { */
+        /* position: absolute; */
+        /* position: absolute; */
+        /* left: -5px; */
+        /* top: 100px; */
+        /* color: #282EB6; */
+    /* } */
+/* 
+    p1 {
+        position: absolute;
+        left: -5px;
+        top: 170px;
+        color: #282EB6;
+    }
+
+    p2 {
+        position: absolute;
+        left: -5px;
+        top: 223px;
+        color: #282EB6;
+    }
+
+    p3 {
+        position: absolute;
+        left: -5px;
+        top: 275px;
+        color: #282EB6;
+    } */
+    /* label,input{
+    display: block;
+} */
+.container2 button{
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    size: 100px;
+    margin-top: -115px;
+    margin-left: 0px;
+    background-color: #282EB6;
+    left: 140px;
+    
+}
+
+    /* p1{
+        top: 350px;
+        left: 100px;
+    } */
+
+
+</style>
+<body>
+    <canvas class="canvas3"></canvas>
+    <img src="https://www.freepnglogos.com/uploads/doctor-png/doctor-bulk-billing-doctors-chapel-hill-health-care-medical-3.png" alt="Doctor Image"  class="image">
+    <div style="background-color: #ffffff; padding: 10px; margin-top: 10px; margin-left: 800px;">
+    <div>
+        <h1 style="color: #282EB6; margin-left: 800px;  margin-top: -800px;  font-size: 50px;">Login</h1>
+    </div>
+    <div class="pic">
+        
+        <!-- <img src="{% static 'img/docc.jpg' %}" id="img" alt="Doctor" style="width: 700px;height: 800px ; right: 0px;  margin-left: 200px; border: 1px solid #000; border-radius: 5px;"> -->
+    </div>
+    <div class="container2" style="margin-top: -50px;">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group" style="margin-bottom: 100px; margin-top: 100px; margin-left: -120px;  padding: 20px;">
+                <label for="id_username" style="color: #282EB6; font-weight: bold; ; font-size: 30px;">Username:</label>
+              
+                <input type="text" id="id_username" style="border-width: 2px; border-color: #282EB6; border-top: 0; margin-top: 10px; border-left: 0; border-right: 0; width: 400px ;  border-bottom: 10;" name="{{ form.username.html_name }}" placeholder="Username">
+
+
+            </div>
+            <div class="form-group" style="margin-bottom: 100px; margin-top: 100px; margin-left: -120px;  padding: 20px; ">
+                <label for="id_password" style="color: #282EB6; font-weight: bold; margin-top: 200px; font-size: 30px;">Password:</label>
+
+                <input type="password" id="id_password" style="border-width: 2px; border-color: #282EB6; border-top: 0; margin-top: -100px; margin-bottom: 70px;  border-left: 0; border-right: 0; border-bottom: 20 ; width: 400px;" class="password-field" name="{{ form.password.html_name }}" placeholder="Password">
+            </div>
+            <button type="submit" class="submit" style="color: rgb(255, 255, 255);">Log in</button>
+
+        </form>
+      
+
+
+        
+      
+        <div style="margin-top: -70px; margin-left: 30px;  padding: 20px; color: #282EB6;">
+            <p1>Don't Have An Account? <a href="{% url 'Signup' %}">
+                <button3>Sign Up Here</button3>
+            </a></p1>
+        </div>
+        </div>
+
+        </form>
+       
+    </div>
+</body>
+</html>

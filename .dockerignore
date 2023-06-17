@@ -1,0 +1,19 @@
+# Ignore version control directories
+.git
+.svn
+
+# Ignore Python bytecode files
+*.pyc
+__pycache__
+
+# Ignore media and static files
+media
+static
+
+# Ignore development and IDE-specific files
+*.env
+*.log
+.vscode
+.idea
+*.pyo
+*.swp

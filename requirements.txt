@@ -1,3 +1,5 @@
+djangorestframework==3.12.4
+
 AppKit==0.2.8
 attrs==22.2.0
 ipython>=3.11.1
@@ -12,7 +14,6 @@ coreschema==0.0.4
 cryptography==41.0.1
 cx_Oracle==8.3.0
 
-djangorestframework==3.12.4
 
 
 defcon==0.10.2

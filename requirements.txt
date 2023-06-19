@@ -12,6 +12,9 @@ coreschema==0.0.4
 cryptography==41.0.1
 cx_Oracle==8.3.0
 
+djangorestframework==3.12.4
+
+
 defcon==0.10.2
 defusedxml==0.7.1
 dl==0.1.0

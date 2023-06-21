@@ -9,7 +9,7 @@ from MyProject import settings
 from . import views
 urlpatterns=[
      path('admin/', admin.site.urls),
-     path('',views.Home,name="Homepage"),
+     path('home',views.Home,name="Homepage"),
 
      path('home/prescription/',views.INDEX,name="main_prescription"),
      path('prescription/',views.INDEX,name="main_prescription"),

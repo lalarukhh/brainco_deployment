@@ -1,3 +1,4 @@
+
 from django.shortcuts import render , redirect
 from Doctor.models import Doctors_Prescription, Patient_Record
 from django.shortcuts import render, get_object_or_404
@@ -5,7 +6,7 @@ from .models import CustomUser, Patient_Record
 from django.core.paginator import Paginator
 
 from django.http import HttpResponse
-from fpdf import FPDF
+# from fpdf import FPDF
 
 from .forms import ContactForm
 
@@ -224,89 +225,93 @@ def contact_With_patient(request):
     return render(request,'contact_patient.html')
 
 def export_to_pdf_prescription(request):
-    # Retrieve data from the database
-    data = Doctors_Prescription.objects.all()  # Replace YourModel with your actual model name
+    
+    # # Retrieve data from the database
+    # data = Doctors_Prescription.objects.all()  # Replace YourModel with your actual model name
 
-    # Create a response object with PDF content type
-    response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'attachment; filename="doctor_prescription_data.pdf"'
+    # # Create a response object with PDF content type
+    # response = HttpResponse(content_type='application/pdf')
+    # response['Content-Disposition'] = 'attachment; filename="doctor_prescription_data.pdf"'
 
-    # Create a PDF object
-    pdf = FPDF()
+    # # Create a PDF object
+    # pdf = FPDF()
 
-    # Add a page
-    pdf.add_page()
+    # # Add a page
+    # pdf.add_page()
 
-    # Set font and size
-    pdf.set_font("Arial", size=12)
+    # # Set font and size
+    # pdf.set_font("Arial", size=12)
 
-    # Set table headers
-    headers = ['Patient ID', 'Doctor ID', 'Patient Name', 'Doctor Name', 'Medicine Name', 'Medicine Dosage']
-    pdf.cell(30, 10, headers[0], border=1)
-    pdf.cell(30, 10, headers[1], border=1)
-    pdf.cell(40, 10, headers[2], border=1)
-    pdf.cell(40, 10, headers[3], border=1)
-    pdf.cell(40, 10, headers[4], border=1)
-    pdf.cell(40, 10, headers[5], border=1)
-    pdf.ln()
+    # # Set table headers
+    # headers = ['Patient ID', 'Doctor ID', 'Patient Name', 'Doctor Name', 'Medicine Name', 'Medicine Dosage']
+    # pdf.cell(30, 10, headers[0], border=1)
+    # pdf.cell(30, 10, headers[1], border=1)
+    # pdf.cell(40, 10, headers[2], border=1)
+    # pdf.cell(40, 10, headers[3], border=1)
+    # pdf.cell(40, 10, headers[4], border=1)
+    # pdf.cell(40, 10, headers[5], border=1)
+    # pdf.ln()
 
-    # Set table data
-    for item in data:
-        # Check if any field is empty
-        if all([item.patient_Id, item.doctor_Id, item.patient_Name, item.doctor_Name, item.medicine_Name, item.medicine_Dossage]):
-            pdf.cell(30, 10, str(item.patient_Id), border=1)
-            pdf.cell(30, 10, str(item.doctor_Id), border=1)
-            pdf.cell(40, 10, str(item.patient_Name), border=1)
-            pdf.cell(40, 10, str(item.doctor_Name), border=1)
-            pdf.cell(40, 10, str(item.medicine_Name), border=1)
-            pdf.cell(40, 10, str(item.medicine_Dossage), border=1)
-            pdf.ln()
+    # # Set table data
+    # for item in data:
+    #     # Check if any field is empty
+    #     if all([item.patient_Id, item.doctor_Id, item.patient_Name, item.doctor_Name, item.medicine_Name, item.medicine_Dossage]):
+    #         pdf.cell(30, 10, str(item.patient_Id), border=1)
+    #         pdf.cell(30, 10, str(item.doctor_Id), border=1)
+    #         pdf.cell(40, 10, str(item.patient_Name), border=1)
+    #         pdf.cell(40, 10, str(item.doctor_Name), border=1)
+    #         pdf.cell(40, 10, str(item.medicine_Name), border=1)
+    #         pdf.cell(40, 10, str(item.medicine_Dossage), border=1)
+    #         pdf.ln()
 
-    # Output the PDF content
-    response.write(pdf.output(dest='S').encode('latin-1'))
+    # # Output the PDF content
+    # response.write(pdf.output(dest='S').encode('latin-1'))
 
-    return response
+    # return response
+    return render(request)
 
 def export_to_pdf_patient(request):
-    # Retrieve data from the database
-    data = Patient_Record.objects.all()  # Replace YourModel with your actual model name
+    # # Retrieve data from the database
+    # data = Patient_Record.objects.all()  # Replace YourModel with your actual model name
 
-    # Create a response object with PDF content type
-    response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'attachment; filename="patient_record_data.pdf"'
+    # # Create a response object with PDF content type
+    # response = HttpResponse(content_type='application/pdf')
+    # response['Content-Disposition'] = 'attachment; filename="patient_record_data.pdf"'
 
-    # Create a PDF object
-    pdf = FPDF()
+    # # Create a PDF object
+    # pdf = FPDF()
 
-    # Add a page
-    pdf.add_page()
+    # # Add a page
+    # pdf.add_page()
 
-    # Set font and size
-    pdf.set_font("Arial", size=12)
+    # # Set font and size
+    # pdf.set_font("Arial", size=12)
 
-    # Set table headers
-    pdf.cell(30, 10, 'Patient ID', border=1)
-    pdf.cell(40, 10, 'Patient Name', border=1)
-    pdf.cell(40, 10, 'Disease', border=1)
-    pdf.cell(30, 10, 'Patient Age', border=1)
-    pdf.cell(30, 10, 'Date', border=1)
-    pdf.ln()
+    # # Set table headers
+    # pdf.cell(30, 10, 'Patient ID', border=1)
+    # pdf.cell(40, 10, 'Patient Name', border=1)
+    # pdf.cell(40, 10, 'Disease', border=1)
+    # pdf.cell(30, 10, 'Patient Age', border=1)
+    # pdf.cell(30, 10, 'Date', border=1)
+    # pdf.ln()
 
-    # Set table data
-    for item in data:
-        # Check if any field is empty
-        if all([item.patient_Id, item.patient_Name, item.disease, item.patient_Age, item.date]):
-            pdf.cell(30, 10, str(item.patient_Id), border=1)
-            pdf.cell(40, 10, str(item.patient_Name), border=1)
-            pdf.cell(40, 10, str(item.disease), border=1)
-            pdf.cell(30, 10, str(item.patient_Age), border=1)
-            pdf.cell(30, 10, str(item.date), border=1)
-            pdf.ln()
+    # # Set table data
+    # for item in data:
+    #     # Check if any field is empty
+    #     if all([item.patient_Id, item.patient_Name, item.disease, item.patient_Age, item.date]):
+    #         pdf.cell(30, 10, str(item.patient_Id), border=1)
+    #         pdf.cell(40, 10, str(item.patient_Name), border=1)
+    #         pdf.cell(40, 10, str(item.disease), border=1)
+    #         pdf.cell(30, 10, str(item.patient_Age), border=1)
+    #         pdf.cell(30, 10, str(item.date), border=1)
+    #         pdf.ln()
 
-    # Output the PDF content
-    response.write(pdf.output(dest='S').encode('latin-1'))
+    # # Output the PDF content
+    # response.write(pdf.output(dest='S').encode('latin-1'))
 
-    return response
+    # return response
+    return render(request)
+
 
 def Contact_Patient(request):
     return render(request,'contact_patient.html')

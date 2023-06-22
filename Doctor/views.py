@@ -1,5 +1,3 @@
-from imaplib import _Authenticator
-from pexpect import replwrap
 from django.shortcuts import render , redirect
 from Doctor.models import Doctors_Prescription, Patient_Record
 from django.shortcuts import render, get_object_or_404
